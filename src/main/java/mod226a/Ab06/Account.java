@@ -1,6 +1,6 @@
 package mod226a.Ab06;
 
-public class TestKonto {
+public class Account {
 
 
     // Antwort zu Aufgabe 5 a == b ist falsch sie verweisen auf unterschiedliche Orte, a.equals(b) stimmt.
