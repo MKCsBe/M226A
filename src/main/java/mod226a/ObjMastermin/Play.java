@@ -7,20 +7,19 @@ public class Play {
     Check checker = new Check();
     UserInput input = new UserInput();
     UserInterface userinterface = new UserInterface();
-    Code inputCode;
-    Code secretCode;
+    UserCode inputCode;
+    SecretCode secretCode;
     CodeGenerator generator = new CodeGenerator();
 
     public void game() {
-        generator.generateCode();
-        secretCode = generator.getCode();
+        secretCode = new SecretCode(generator.generateCode());
         boolean end = false;
         while (!end) {
             tries += 1;
             userinterface.firstOutput();
             try {
                 input.takeInput();
-                inputCode = input.getUserCode();
+                inputCode = new UserCode(input.getUserCode());
                 if (validator.completeValidation(inputCode)) {
                     userinterface.tryResult(inputCode, secretCode);
                     if (checker.inCorrectPos(inputCode, secretCode) == 4)
@@ -30,7 +29,7 @@ public class Play {
                 System.out.println("Nochmal");
             }
         }
-        userinterface.gameEnd(tries, input.getUserCode());
+        userinterface.gameEnd(tries, inputCode);
     }
 
 }

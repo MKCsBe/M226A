@@ -4,15 +4,15 @@ import java.util.Scanner;
 
 public class UserInput {
 
-    Code userCode;
+    UserCode userCode;
 
     Scanner input = new Scanner(System.in);
 
     public void takeInput(){
-        userCode = new Code(input.nextLine());
+        userCode = new UserCode(input.nextLine());
     }
 
-    public Code getUserCode(){
-        return userCode;
+    public String getUserCode(){
+        return this.userCode.userCode;
     }
 }

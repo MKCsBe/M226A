@@ -1,16 +1,12 @@
 package mod226a.ObjMastermin;
 
-import java.util.Random;
-
 public class CodeGenerator {
 
     RandomGenerator rand = new RandomGenerator();
 
     char[] colours = new char[4];
 
-    Code code;
-
-    public void generateCode() {
+    public char[] generateCode() {
         for (int i = 0; i < 4; i++) {
             int r = rand.randInt(0, 5);
             switch (r){
@@ -34,11 +30,6 @@ public class CodeGenerator {
                     break;
             }
         }
-        code = new Code(colours);
+        return colours;
     }
-
-    public Code getCode(){
-        return this.code;
-    }
-
 }

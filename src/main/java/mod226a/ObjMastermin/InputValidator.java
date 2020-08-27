@@ -3,14 +3,14 @@ package mod226a.ObjMastermin;
 public class InputValidator {
 
 
-    public boolean completeValidation(Code userCode) {
+    public boolean completeValidation(UserCode userCode) {
         String code = userCode.userCodeToString();
         if (code.length() == 4 && contains(userCode))
             return true;
         else return false;
     }
 
-    public boolean contains(Code userCode) {
+    public boolean contains(UserCode userCode) {
         boolean cont;
         int counter = 0;
         String tryCode = userCode.userCodeToString();

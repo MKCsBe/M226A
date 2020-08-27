@@ -2,7 +2,7 @@ package mod226a.ObjMastermin;
 
 public class Check {
 
-    public int correctColor(Code userCode, Code code) {
+    public int correctColor(UserCode userCode, SecretCode code) {
         int has = 0;
         char[] tryCode = userCode.userCodeToCharArray();
         char[] secretCode = code.CodeToCharArray();
@@ -19,7 +19,7 @@ public class Check {
         return has;
     }
 
-    public int inCorrectPos(Code userCode, Code code) {
+    public int inCorrectPos(UserCode userCode, SecretCode code) {
         int has = 0;
         char[] tryCode = userCode.userCodeToCharArray();
         char[] secretCode = code.CodeToCharArray();
