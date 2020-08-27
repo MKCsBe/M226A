@@ -57,6 +57,7 @@ public class Mastermind {
         }
     }
 
+
     public static void Play(char[] code, char[] trial, char[] colours) {
         generateCode(code, colours);
         String written = "";
@@ -73,8 +74,7 @@ public class Mastermind {
                     if (samePos(trial, code) == 4) {
                         end = true;
                     }
-                }
-                else System.out.println("Falsche Eingabe");
+                } else System.out.println("Falsche Eingabe");
             } catch (Exception e) {
                 System.out.println("Nochmal");
             }
@@ -87,8 +87,7 @@ public class Mastermind {
         int counter = 0;
 
         for (char c : colours)
-            for (int i = 0; i < written.length(); i++)
-            {
+            for (int i = 0; i < written.length(); i++) {
                 if (c == written.charAt(i))
                     counter += 1;
             }
@@ -99,18 +98,16 @@ public class Mastermind {
         return cont;
     }
 
-    public static void gameEnd(int tries, String code)
-    {
+    public static void gameEnd(int tries, String code) {
         System.out.println("Spiel beendet. Geheimcode war " + code + " Anzahl Versuche war: " + tries);
     }
 
-    public static void tryResult(char[] trial,char[] code)
-    {
-        System.out.println("Richtige Position: " + samePos(trial, code) + " Richtige Farbe: " + (inArray(trial, code) - samePos(trial,code)));
+
+    public static void tryResult(char[] trial, char[] code) {
+        System.out.println("Richtige Position: " + samePos(trial, code) + " Richtige Farbe: " + (inArray(trial, code) - samePos(trial, code)));
     }
 
-    public static void output()
-    {
+    public static void output() {
         System.out.println("Geben Sie einen Versuchscode mit vier Buchstaben aus der Menge (r,g,b,y,s,w) ein: ");
     }
 }

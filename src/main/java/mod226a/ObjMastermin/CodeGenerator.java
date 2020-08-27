@@ -6,15 +6,39 @@ public class CodeGenerator {
 
     RandomGenerator rand = new RandomGenerator();
 
-    Color[] colours = new Color[4];
+    char[] colours = new char[4];
 
-    Code code = new Code(colours);
+    Code code;
 
     public void generateCode() {
         for (int i = 0; i < 4; i++) {
-            String r = String.valueOf(rand.randInt(0, 5));
-            colours[i] = Color.valueOf(r);
+            int r = rand.randInt(0, 5);
+            switch (r){
+                case 0:
+                    colours[i] = 'r';
+                    break;
+                case 1:
+                    colours[i] = 'b';
+                    break;
+                case 2:
+                    colours[i] = 'g';
+                    break;
+                case 3:
+                    colours[i] = 'y';
+                    break;
+                case 4:
+                    colours[i] = 's';
+                    break;
+                case 5:
+                    colours[i] = 'w';
+                    break;
+            }
         }
+        code = new Code(colours);
+    }
+
+    public Code getCode(){
+        return this.code;
     }
 
 }

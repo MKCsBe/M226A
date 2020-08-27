@@ -2,20 +2,17 @@ package mod226a.ObjMastermin;
 
 public enum Color {
 
-    RED('r',0),
-    BLUE('b',1),
-    GREEN('g',2),
-    YELLOW('y',3),
-    BLACK('s',4),
-    WHITE('w', 5);
+    RED('r'),
+    BLUE('b'),
+    GREEN('g'),
+    YELLOW('y'),
+    BLACK('s'),
+    WHITE('w');
 
     char color;
-    int index;
 
-    Color(char color, int index){
+    Color(char color){
         this.color = color;
-        this.index = index;
     }
-
 
 }
