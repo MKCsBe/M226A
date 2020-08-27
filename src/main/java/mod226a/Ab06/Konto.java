@@ -21,11 +21,18 @@ public class Konto {
 
     public double verzinsen(double days)
     {
-        if (Saldo > 50000)
+        if (Saldo > 50000 && Saldo < 500000) {
             zinssatz = zinssatz / 2;
+            Zins = Saldo * zinssatz * days/365;
+        }
         else if (Saldo > 500000)
+        {
             zinssatz = 0;
-        Zins = Saldo * zinssatz * days/365;
+            Zins = Saldo * zinssatz * days/365;
+        }
+        else
+            Zins = Saldo * zinssatz * days/365;
+        Saldo += Zins;
         return Zins;
     }
 

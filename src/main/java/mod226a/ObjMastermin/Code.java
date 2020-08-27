@@ -2,9 +2,15 @@ package mod226a.ObjMastermin;
 
 public class Code {
 
-    char[] code;
+    String usercode;
+    Color[] code;
 
-    public Code(char[] code){
+    public Code(String code){
+        usercode = code;
+    }
+
+    public Code(Color[] code){
         this.code = code;
     }
+
 }

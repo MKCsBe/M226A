@@ -10,49 +10,15 @@ public class Auf1 {
         int i1 = 0;
         int i2 = 0;
         int op = 0;
+        String i11 = "Operand1";
+        String i22 = "Operand2";
+        String oper = "Operator";
 
         int result = 0;
 
-        while (true)
-        {
-            Scanner input = new Scanner(System.in);
-            try {
-                System.out.println("Operand1 bitte: ");
-                i1 = input.nextInt();
-                break;
-            }
-            catch (InputMismatchException e)
-            {
-                System.out.println("Eingabefehler");
-            }
-        }
-        while (true)
-        {
-            Scanner input = new Scanner(System.in);
-            try {
-                System.out.println("Operand2 bitte: ");
-                i2 = input.nextInt();
-                break;
-            }
-            catch (InputMismatchException e)
-            {
-                System.out.println("Eingabefehler");
-            }
-
-        }
-        while (true)
-        {
-            Scanner input = new Scanner(System.in);
-            try {
-                System.out.println("Operator bitte: ");
-                op = input.nextInt();
-                break;
-            }
-            catch (InputMismatchException e)
-            {
-                System.out.println("Eingabefehler");
-            }
-        }
+        i1 = inputValidator(i11);
+        i2 = inputValidator(i22);
+        op = inputValidator(oper);
 
 
         System.out.println("Ergebnis: " + calc(i1,i2,op));
@@ -75,5 +41,23 @@ public class Auf1 {
                 System.out.println("Ungültiger Operatorwert!");
                 return 0;
         }
+    }
+
+    public static int inputValidator(String opera){
+        int op;
+        while (true)
+        {
+            Scanner input = new Scanner(System.in);
+            try {
+                System.out.println(opera + " bitte: ");
+                op = input.nextInt();
+                break;
+            }
+            catch (InputMismatchException e)
+            {
+                System.out.println("Eingabefehler");
+            }
+        }
+        return op;
     }
 }
