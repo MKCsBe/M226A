@@ -13,8 +13,10 @@ package mod226a.Minesweeper;
 
 public class MineSweeper {
 
-    public static void main(String[] args) {
+    static Play play = new Play();
 
+    public static void main(String[] args) {
+        play.start();
     }
 
 }
