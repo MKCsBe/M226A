@@ -1,4 +1,4 @@
-package mod226a;
+package mod226a.ProceduralMastermind;
 
 import java.util.Random;
 import java.util.Scanner;
