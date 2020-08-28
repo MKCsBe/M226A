@@ -21,7 +21,7 @@ public class Auf1 {
         op = inputValidator(oper);
 
 
-        System.out.println("Ergebnis: " + calc(i1,i2,op));
+        System.out.println("Ergebnis: " + calc(i1, i2, op));
     }
 
     public static int calc(int operand1, int operand2, int operator) {
@@ -34,7 +34,10 @@ public class Auf1 {
             case 3:
                 return operand1 * operand2;
             case 4:
-                return operand1 / operand2;
+                if (operand2 == 0) {
+                    System.out.println("Division mit 0 nicht möglich. Defaultergebnis 0!");
+                    return 0;
+                } else return operand1 / operand2;
             case 5:
                 return operand1 % operand2;
             default:
@@ -43,18 +46,15 @@ public class Auf1 {
         }
     }
 
-    public static int inputValidator(String opera){
+    public static int inputValidator(String opera) {
         int op;
-        while (true)
-        {
+        while (true) {
             Scanner input = new Scanner(System.in);
             try {
                 System.out.println(opera + " bitte: ");
                 op = input.nextInt();
                 break;
-            }
-            catch (InputMismatchException e)
-            {
+            } catch (InputMismatchException e) {
                 System.out.println("Eingabefehler");
             }
         }

@@ -22,6 +22,10 @@ class Auf1Test {
         assertEquals(20, Auf1.calc(10,2,3));
         assertEquals(0, Auf1.calc(10,2,5));
         assertEquals(0, Auf1.calc(10,2,6));
+        assertEquals(-12, Auf1.calc(10,-2,2));
+        assertEquals(0, Auf1.calc(10,0,4));
+        assertEquals(8, Auf1.calc(10,-2,1));
+        assertEquals(8, Auf1.calc(-10,-2,2));
     }
 
 }
