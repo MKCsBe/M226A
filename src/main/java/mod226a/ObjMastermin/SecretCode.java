@@ -2,7 +2,15 @@ package mod226a.ObjMastermin;
 
 public class SecretCode {
 
+    /**
+     * Speichern des code als Char array zur verfügung stellen.
+     */
     char[] code;
+
+    /**
+     * Konstruktor der Klasse SecretCode.
+     * @param code char array der der Code ist.
+     */
 
     public SecretCode(char[] code){
         this.code = code;
@@ -11,10 +19,6 @@ public class SecretCode {
     public char[] CodeToCharArray(){
         String code = String.valueOf(this.code);
         return code.toCharArray();
-    }
-
-    public String codeToString(){
-        return this.code.toString();
     }
 
 }

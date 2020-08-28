@@ -2,6 +2,10 @@ package mod226a.ObjMastermin;
 
 public enum Color {
 
+    /**
+     * Aufzählung der möglichkeiten in Color.
+     */
+
     RED('r'),
     BLUE('b'),
     GREEN('g'),
@@ -11,6 +15,10 @@ public enum Color {
 
     char color;
 
+    /**
+     * Konstruktor für Color.
+     * @param color char um auf die Color zuzugreifen.
+     */
     Color(char color){
         this.color = color;
     }

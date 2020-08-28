@@ -2,9 +2,18 @@ package mod226a.ObjMastermin;
 
 public class CodeGenerator {
 
+    /**
+     * Deklarieren eines Objekts der RandomGenerator Klasse.
+     */
+
     RandomGenerator rand = new RandomGenerator();
 
     char[] colours = new char[4];
+
+    /**
+     * Erstellen eines 4 stelligen codes über PseudoRandom zahlen.
+     * @return gibt den char array zurück.
+     */
 
     public char[] generateCode() {
         for (int i = 0; i < 4; i++) {
