@@ -23,7 +23,6 @@ public class UserInterface {
                     System.out.print(cells[i - 1][k].style + " ");
                 }
             }
-
             System.out.print("\n");
         }
     }

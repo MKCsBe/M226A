@@ -10,4 +10,7 @@ public class Bomb {
         this.yCoordinate = yCoordinate;
     }
 
+    public void increaseCellBombCountAround(Cell[][] cells) {
+
+    }
 }

@@ -10,6 +10,7 @@ public class ChosenField {
     int yUserCoordinate;
     String userCellStyle;
 
+
     public void takeInput() {
         boolean incorrect = true;
         do {
@@ -19,8 +20,7 @@ public class ChosenField {
                     xUserCoordinate = input.nextInt();
                     yUserCoordinate = input.nextInt();
                     incorrect = false;
-                }
-                else System.out.println("Falsche Eingabe");
+                } else System.out.println("Falsche Eingabe");
             } catch (Exception e) {
                 System.out.println("Falsch eingegeben!");
                 incorrect = true;

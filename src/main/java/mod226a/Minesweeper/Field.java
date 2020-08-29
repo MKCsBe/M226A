@@ -10,9 +10,9 @@ public class Field {
             for (int y = 0; y < cells.length; y++) {
                 for (Bomb bomb : bombs) {
                     if (x == bomb.xCoordinate && y == bomb.yCoordinate) {
-                        cells[x][y] = new Cell(x, y, "*");
+                        cells[x][y] = new Cell(x, y, "*", "Bomb");
                         break;
-                    } else cells[x][y] = new Cell(x, y, "0");
+                    } else cells[x][y] = new Cell(x, y, "0", "Normal");
                 }
             }
         }

@@ -9,9 +9,9 @@ public class Play {
     Bomb[] bombs = new Bomb[5];
 
     public void start(){
-        userInterface.commandHint();
-        chosenField.takeInput();
-        userInterface.outputPlayerInput(chosenField);
+        //userInterface.commandHint();
+        //chosenField.takeInput();
+        //userInterface.outputPlayerInput(chosenField);
         field.createBombs(bombs);
         field.generate(cells,bombs);
         userInterface.showField(cells);
