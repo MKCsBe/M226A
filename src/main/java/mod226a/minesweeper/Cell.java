@@ -10,13 +10,13 @@ public class Cell {
     boolean marked = false;
 
     String style;
-    String description;
 
-    public Cell(int xCoordinate, int yCoordinate, String style, String description){
+    boolean isBomb = false;
+
+    public Cell(int xCoordinate, int yCoordinate, boolean isBomb){
         this.xCoordinate = xCoordinate;
         this.yCoordinate = yCoordinate;
-        this.style = style;
-        this.description = description;
+        this.isBomb = isBomb;
     }
 
     public void mark(int xCoordinate, int yCoordinate){
@@ -25,6 +25,10 @@ public class Cell {
 
     public void uncover(int xCoordinate, int yCoordinate, String style){
 
+    }
+
+    public String inAreatoString(){
+        return Integer.toString(bombsInArea);
     }
 
 }

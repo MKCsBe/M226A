@@ -8,6 +8,6 @@ class PITest {
 
     @Test
     void calculate() {
-        assertEquals(Math.PI,PI.calculate());
+        assertEquals(Math.PI,PI.calculate(), 0.01);
     }
 }
